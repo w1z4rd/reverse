@@ -29,8 +29,9 @@ public class Reverse {
     if (input.charAt(0) == ' ') {
       return input.trim();
     }
-    char t = input.charAt(input.indexOf(' ') - 1);
-    input = input.replace(t + "", "");
-    return reverse(input + t);
+    int targetIndex = input.indexOf(' ') - 1;
+    char targetChar = input.charAt(targetIndex);
+    input = input.substring(0, targetIndex) + input.substring(targetIndex + 1, input.length());
+    return reverse(input + targetChar);
   }
 }

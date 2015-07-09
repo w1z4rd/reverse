@@ -48,5 +48,11 @@ public class ReverseTest extends TestCase {
     String expected = "";
     assertEquals(expected, actual);
   }
+  
+  public void testRepetingCharactersInput() {
+    String actual = Reverse.reverse("aaabbbccdd");
+    String expected = "ddccbbbaaa";
+    assertEquals(expected, actual);
+  }
 
 }
