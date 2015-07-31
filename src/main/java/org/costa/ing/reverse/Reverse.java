@@ -34,4 +34,12 @@ public class Reverse {
     input = input.substring(0, targetIndex) + input.substring(targetIndex + 1, input.length());
     return reverse(input + targetChar);
   }
+
+  public static String recursiveMethod(String str) {
+    if ((null == str) || (str.isEmpty())) {
+      return "";
+    }
+    return recursiveMethod(str.substring(1)) + str.charAt(0);
+  }
+
 }
